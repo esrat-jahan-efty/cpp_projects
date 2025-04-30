@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C++",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",                // Enables debugging
+                "${file}",          // Current file
+                "-o",               // Output flag
+                "${fileDirname}/${fileBasenameNoExtension}"  // Output filename (without .cpp)
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
